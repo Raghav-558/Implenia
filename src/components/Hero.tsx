@@ -5,7 +5,7 @@ import CustomButton from "./common/CustomButton";
 
 const Hero = () => {
   return (
-    <div className="bg-hero-bg bg-cover bg-center relative overflow-hidden lg:min-h-[662px]">
+    <div id="home" className="bg-hero-bg bg-cover bg-center relative overflow-hidden lg:min-h-[662px]">
       <div className="bg-white">
         <Header />
       </div>
@@ -14,11 +14,11 @@ const Hero = () => {
         alt="hello-robot"
         width={380}
         height={562}
-        className="absolute left-0 -bottom-[40px] max-xl:hidden pointer-events-none"
+        className="absolute left-0 -bottom-[40px] max-xl:hidden pointer-events-none robot robot-motion"
       />
       <div className="max-w-[1172px] px-4 mx-auto">
         <div className="pt-[197px] pb-[168px] max-lg:py-28 max-md:py-24 max-sm:py-20">
-          <p className="font-bold text-[21px] leading-[21px] text-white text-shadow">
+          <p className="font-bold text-[21px] leading-[21px] text-white text-shadow pb-2 max-md:pb-1">
             Shape the future of Implenia!
           </p>
           <h1 className="font-bold text-white text-[76px] leading-[80px] max-lg:text-7xl max-md:text-6xl max-sm:text-5xl max-lg:leading-[76px] max-md:leading-[64px] max-sm:leading-[52px] relative z-10 max-w-[600px] text-shadow">
@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           <CustomButton
             text="Bring your idea to life!"
-            myClass="mt-[25px] border-2 border-white h-[67px] w-[312px] text-white hover:bg-black hover:text-white hover:border-black max-md:text-lg max-md:w-[240px] max-md:h-[56px]"
+            myClass="mt-[25px] max-sm:mt-5 border-2 border-white h-[67px] w-[312px] text-white hover:bg-black hover:text-white hover:border-black max-md:text-lg max-md:w-[240px] max-md:h-[56px]"
           />
         </div>
       </div>

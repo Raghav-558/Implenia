@@ -30,7 +30,7 @@ const Header = () => {
             alt="page-logo"
             width={93}
             height={93}
-            className="pointer-events-none size-[93px] max-lg:size-[70px]"
+            className="pointer-events-none size-[93px] max-lg:size-[70px] max-sm:size-[60px]"
           />
         </a>
         <div

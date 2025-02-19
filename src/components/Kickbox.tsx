@@ -5,7 +5,7 @@ import CustomButton from "./common/CustomButton";
 
 const Kickbox = () => {
   return (
-    <div className="pt-[134px] pb-[129px] max-lg:py-20 max-md:py-[60px] overflow-hidden">
+    <div id="community" className="pt-[134px] pb-[129px] max-lg:py-20 max-md:py-[60px] overflow-hidden">
       <div className="max-w-[1122px] px-4 mx-auto">
         <CustomHeading text="IMPLENIA KICKBOX" />
         <p className="font-light text-[21px] leading-[27px] tracking-[-0.28px] max-w-[1090px] max-md:text-lg text-custom-black pt-4 max-md:pt-2">

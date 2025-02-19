@@ -7,6 +7,23 @@ body {
   font-family: "Source Sans 3", serif;
 }
 
+html,body{
+  scroll-behavior: smooth;
+}
+
 .text-shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.robot.robot-motion {
+  animation: robot-motion 1s ease-in-out 1;
+}
+
+@keyframes robot-motion {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
 }
