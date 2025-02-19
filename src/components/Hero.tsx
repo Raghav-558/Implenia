@@ -5,7 +5,7 @@ import CustomButton from "./common/CustomButton";
 
 const Hero = () => {
   return (
-    <div id="home" className="bg-hero-bg bg-cover bg-center relative overflow-hidden lg:min-h-[662px]">
+    <div id="home" className="bg-hero-bg bg-cover bg-center relative overflow-hidden">
       <div className="bg-white">
         <Header />
       </div>
@@ -17,7 +17,7 @@ const Hero = () => {
         className="absolute left-0 -bottom-[40px] max-xl:hidden pointer-events-none robot robot-motion"
       />
       <div className="max-w-[1172px] px-4 mx-auto">
-        <div className="pt-[197px] pb-[168px] max-lg:py-28 max-md:py-24 max-sm:py-20">
+        <div className="pt-[197px] pb-[168px] max-lg:py-28 max-md:py-24 max-sm:py-24">
           <p className="font-bold text-[21px] leading-[21px] text-white text-shadow pb-2 max-md:pb-1">
             Shape the future of Implenia!
           </p>

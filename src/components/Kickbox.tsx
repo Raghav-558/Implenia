@@ -1,12 +1,30 @@
+"use client";
 import { KICKBOX_LIST } from "@/utils/helper";
-import React from "react";
+import React, { useState } from "react";
 import CustomHeading from "./common/CustomHeading";
+import CountUp from "react-countup";
 import CustomButton from "./common/CustomButton";
+import { useInView } from "react-intersection-observer";
 
 const Kickbox = () => {
+  const [count, setCount] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    onChange: (inView) => setCount(inView),
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      setCount(true);
+    }
+  }, [inView]);
+
   return (
-    <div id="community" className="pt-[134px] pb-[129px] max-lg:py-20 max-md:py-[60px] overflow-hidden">
-      <div className="max-w-[1122px] px-4 mx-auto">
+    <div
+      id="community"
+      className="pt-[134px] pb-[129px] max-lg:py-20 max-md:py-[60px] overflow-hidden"
+    >
+      <div className="max-w-[1122px] px-4 mx-auto" ref={ref}>
         <CustomHeading text="IMPLENIA KICKBOX" />
         <p className="font-light text-[21px] leading-[27px] tracking-[-0.28px] max-w-[1090px] max-md:text-lg text-custom-black pt-4 max-md:pt-2">
           Since 2019, our Kickbox Intrapreneurship Program has been inspiring
@@ -23,7 +41,20 @@ const Kickbox = () => {
               className="flex flex-col max-md:items-center max-md:justify-center"
             >
               <p className="text-[40px] lg:text-[80px] md:text-[60px] sm:leading-[60px] leading-[40px] lg:leading-[100px] tracking-[-0.66px] text-custom-orange">
-                {item.title}
+                +
+                <CountUp
+                  start={0}
+                  end={
+                    count && i === 0
+                      ? 155
+                      : count && i === 1
+                      ? 325
+                      : count && i === 2
+                      ? 250
+                      : 0
+                  }
+                  duration={3}
+                />
               </p>
               <p className="md:text-[21px] font-bold leading-[21px]">
                 {item.description}
